@@ -1,0 +1,16 @@
+on:
+  push:
+  workflow_dispatch:
+env:
+  notice: Ceci est une notice
+  warning: Ceci est un avertissement
+  error: Une erreur est survenue
+jobs:
+  display_env:
+   runs-on: ubuntu-latest
+   steps:
+     - name: "Debug infos for deployment"
+       run: |
+         echo "::notice:: Ceci est une notice"
+         echo ":warning: Ceci est un avertissement"
+         echo "::error:: Une erreur est survenue"
