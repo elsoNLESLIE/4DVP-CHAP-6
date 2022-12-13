@@ -1,0 +1,14 @@
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  display_env:
+   runs-on: ubuntu-latest
+   steps:
+     - name: "Log group"
+       run: |
+         echo" ::group:: "ecole-it"
+         echo "hello, ecole-it"
+         echo ":: endgroup::"
+         echo "ceci n'est pas dans le group"
